@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="intro">
+        <h1>Let's begin up&down game.</h1>
+        <h1>you can try 10 times, press the button!</h1>
+        <button onclick="updown()" style="font-size: 40px;">Start!</button> 
+    </div>
+
+    
+    <script>
+        function updown(){
+        b=Math.random()*100
+        corr = Math.floor(b)
+        life = 1        
+            
+        do{
+            ans = prompt("guess number!")
+            if(corr == ans){
+                document.write("correct!!","<br>")
+                document.write("you corrected in ",life," times!!")
+                break
+            }else if(corr < ans){
+                document.write("your try :",life,"<br>")
+                document.write("your answer: ", ans,"<br>")
+                alert("down!! \n"+ "your try : " + life)
+                life++
+            }else if(corr>ans){
+                document.write("your try :",life,"<br>")
+                document.write("your answer: ", ans ,"<br>")
+                alert("up!! \n"+ "your try : " + life)
+                life++
+            }else if(life ==10){
+                document.write("You lose!", "the answer was ",corr)
+            }
+        }while(life<11)   
+    }
+    </script>
+</body>
+</html>
