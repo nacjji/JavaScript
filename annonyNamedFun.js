@@ -24,11 +24,32 @@
 //     console.log('선언적 함수처럼 생성한 화살표 함수')
 // }
 
-
-foo = () => {console.log('익명 함수')} 
+foo() // expected '선언적함수'
 
 function foo(){
     console.log('선언적 함수')
 }
 
-foo()
+// literal 방식(문자 그대로 즉, 위에서 아래로 실행되는 코드 진행)
+foo = () => {
+    console.log('익명 함수'
+    )} 
+
+
+foo() // expected '익명함수'
+
+
+
+
+
+
+
+// console.log(a)
+
+
+// let a;
+
+let a
+console.log(a)
+
+>> undefined

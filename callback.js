@@ -56,17 +56,3 @@ first(second)
 
 
 
-
-// function first(callback){
-//     console.log(1)
-//     callback(2)
-// }
-
-// function second(i){
-//     console.log(i)
-// }
-
-// first(second)
-
-// >> 1
-//    2
