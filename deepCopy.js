@@ -1,5 +1,14 @@
-const array = [1,2,3,4]
+const deep = {
+  name: "James",
+  age: "28",
+  class: {
+    firstClass: 1,
+    secondClass: 2,
+  },
+};
 
-const _array = [...array]
+const deep2 = { ...deep };
 
-console.log(_array)
+deep.class.firstClass = 3;
+
+console.log(deep2);

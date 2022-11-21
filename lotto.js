@@ -1,31 +1,49 @@
-// 로또번호 추첨
-let lotto = new Set()
+let lottoNums = new Set();
 
-while(true){
-    let makeLottoNum = Math.random()
-    lotto.add(parseInt(makeLottoNum*45))
-    if(lotto.size === 6){
+// 로또번호 추첨
+let makeLotto = ()=>{
+    while(true){
+        let makeLottoNum = Math.random()
+        lottoNums.add(parseInt(makeLottoNum*45))
+        if(lottoNums.size === 6){
+            break
+        }
+    }
+}
+
+// 내가 입력한 로또번호
+let myNums = new Set()
+let i = 0 
+let makeMyNums = ()=>{
+    while(myNums.size < 6){
+        i++
+        let nums = Number(prompt(`${i}번째 숫자를 입력하세요`))
+        if (nums <= 0 || nums > 45 || !nums) {  
+            alert('1부터 45까지의 중복되지 않은 숫자를 입력하세요.')
+            i-- 
+        }else{
+            myNums.add(nums)   
+        }
+    }
+}
+
+
+// 등수 판별
+
+
+
+while (true) {
+    makeLotto()
+    makeMyNums()
+    if(!confirm('다시 할까요?')){
         break
     }
 }
-// set to array
-let lottoArray = [...lotto]
+console.log(myNums)
+console.log(lottoNums)
 
 
-// 로또 입력 
-let [a,b,c,d,e,f] = prompt("로또번호를 입력하세요").split(" ")
-
-let inputNums = [a,b,c,d,e,f]
-
-// 로또번호 유효한지 판별
-for (let i = 0; i < inputNums.length; i++) {
-    if (i <= 0 && i>45) {
-        alert('1부터 45까지의 숫자를 입력하세요')
-    }
+for (let k = 0; k < 6; k++) {
+    if(myNums[k]))
+    
 }
-
-// 입력과 추첨번호가 일치한지 판별 filter
-
-
-console.log(lottoArray)
-console.log(lucky)
