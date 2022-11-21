@@ -10,7 +10,7 @@ function solution(price, money, count) {
   }
 }
 
-solution(3, 20, 4); // // solution(3, 20, 4); //10 // // money 음수가되면 price 가 얼마 부족한지
+solution(2, 20, 4); // // solution(3, 20, 4); //10 // // money 음수가되면 price 가 얼마 부족한지
 
 //  price 3
 // 2price 6
